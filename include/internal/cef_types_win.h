@@ -39,6 +39,7 @@
 #include "include/internal/cef_string.h"
 #include "include/internal/cef_types_color.h"
 #include "include/internal/cef_types_geometry.h"
+#include "include/internal/cef_types_osr.h"
 #include "include/internal/cef_types_runtime.h"
 
 // Handle types.
@@ -114,6 +115,8 @@ typedef struct _cef_window_info_t {
   cef_runtime_style_t runtime_style;
 } cef_window_info_t;
 
+#define CEF_OSR_EXTRA_INFO
+
 ///
 /// Structure containing shared texture information for the OnAcceleratedPaint
 /// callback. Resources will be released to the underlying pool for reuse when
@@ -130,6 +133,11 @@ typedef struct _cef_accelerated_paint_info_t {
   /// The pixel format of the texture.
   ///
   cef_color_type_t format;
+
+  ///
+  /// The extra common info.
+  ///
+  cef_accelerated_paint_info_common_t extra;
 } cef_accelerated_paint_info_t;
 
 #ifdef __cplusplus

@@ -1,4 +1,4 @@
-// Copyright (c) 2024 Marshall A. Greenblatt. All rights reserved.
+// Copyright (c) 2025 Marshall A. Greenblatt. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -42,13 +42,13 @@
 // way that may cause binary incompatibility with other builds. The universal
 // hash value will change if any platform is affected whereas the platform hash
 // values will change only if that particular platform is affected.
-#define CEF_API_HASH_UNIVERSAL "d3709fcbd6630817b73287083d5440bffffcfb0b"
+#define CEF_API_HASH_UNIVERSAL "58afb41ab45877096c4df518d0f311dd102e8255"
 #if defined(OS_WIN)
-#define CEF_API_HASH_PLATFORM "2e66390b5f0fa21ab4667b503e76164037cd674e"
+#define CEF_API_HASH_PLATFORM "e718b269b34ffcd2da745324e92ee8a428895b97"
 #elif defined(OS_MAC)
-#define CEF_API_HASH_PLATFORM "94ce56bc6f289ae039ca7db2ac8d32901e71a4e1"
+#define CEF_API_HASH_PLATFORM "30df98c0e45639057e00a07a58f4cc72cc1b8614"
 #elif defined(OS_LINUX)
-#define CEF_API_HASH_PLATFORM "2fda6a422c06b87a4ce47bdfd4c985346f1eaab8"
+#define CEF_API_HASH_PLATFORM "879c92db813f0935e4107834b96351d6ac21973b"
 #endif
 
 #ifdef __cplusplus
