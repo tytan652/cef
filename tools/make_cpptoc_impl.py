@@ -7,10 +7,13 @@ from cef_parser import *
 
 
 def make_cpptoc_impl_proto(name, func, parts):
+  proto = ''
+  if func.has_attrib('no_stack_protector'):
+    proto += 'NO_STACK_PROTECTOR '
   if isinstance(func, obj_function_virtual):
-    proto = parts['retval'] + ' CEF_CALLBACK'
+    proto += parts['retval'] + ' CEF_CALLBACK'
   else:
-    proto = 'CEF_EXPORT ' + parts['retval']
+    proto += 'CEF_EXPORT ' + parts['retval']
 
   proto += ' ' + name + '(' + ', '.join(parts['args']) + ')'
   return proto
